@@ -1,6 +1,6 @@
 {
-  "name": "Task",
-  "description": "Task Manager",
+  "name": "App",
+  "description": "App",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
