@@ -6,13 +6,13 @@ var util = require('util'),
     url = require('url'),
     events = require('events');
 
-var port = process.env.PORT;
+var port = process.env.PORT || 5000;
 
 function main(argv) {
   new HttpServer({
     'GET': createServlet(StaticServlet),
     'HEAD': createServlet(StaticServlet)
-  }).start(Number(argv[2] || 5000));
+  }).start(Number(port));
 }
 
 function escapeHtml(value) {
