@@ -36,6 +36,7 @@ You will need to have NodeJS installed on your machine. For more information, ch
 
 #Installation
 
+> npm install -g grunt-cli
 > npm install
 
 #Running Unit tests
