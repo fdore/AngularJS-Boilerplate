@@ -11,5 +11,8 @@
     "grunt-contrib-jshint": "~0.3.0",
     "grunt-contrib-watch": "~0.3.1",
     "grunt-karma": "latest"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"  
   }
 }
