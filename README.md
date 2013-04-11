@@ -17,8 +17,8 @@ Simply clone the project, and you are ready to go.
 		- filters
 		- providers
 		- services
-		main.js (entry point for requireJS)
-		routes.js (routes configuration)
+		- main.js (entry point for requireJS)
+		- routes.js (routes configuration)
 	- lib (3rd parties libraries)
 	- partials (views)
 - node_modules	
