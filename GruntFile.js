@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         watch: {
             files: '**/*.js',
-            tasks: ['jshint', 'testacular']
+            tasks: ['jshint', 'karma']
         },
         jshint: {
             all: ['GruntFile.js', 'app/js/**/*.js', 'test/unit/**/*.js'],
@@ -37,10 +37,10 @@ module.exports = function (grunt) {
                 }
             }
         },
-        testacular: {
+        karma: {
             unit: {
                 options: {
-                    configFile: 'scripts/config/testacular.conf.js',
+                    configFile: 'scripts/config/karma.conf.js',
                     runnerPort: 9101,
                     keepalive: true
                 }
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-testacular');
+    grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-contrib-watch');
     // Default task.
     grunt.registerTask('default', 'jshint');

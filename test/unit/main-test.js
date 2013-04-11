@@ -3,8 +3,8 @@
     var file, requireModules;
     requireModules = [];
 
-    for (file in window.__testacular__.files) {
-        if (window.__testacular__.files.hasOwnProperty(file)) {
+    for (file in window.__karma__.files) {
+        if (window.__karma__.files.hasOwnProperty(file)) {
             if (file.substring(file.length - 8, file.length) === '.Spec.js') {
                 requireModules.push(file);
             }
@@ -49,7 +49,7 @@
         },
         priority: ['angular']
     }, requireModules, function () {
-        window.__testacular__.start();
+        window.__karma__.start();
     }, function (err) {
     });
 } (window, requirejs));
