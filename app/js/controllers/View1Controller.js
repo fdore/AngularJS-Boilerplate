@@ -1,9 +1,9 @@
 define([], function () {
     'use strict';
 
-    var MainController = function ($scope) {
+    var View1Controller = function ($scope) {
         $scope.viewName = "View 1";
     };
 
-    return MainController;
+    return View1Controller;
 });
