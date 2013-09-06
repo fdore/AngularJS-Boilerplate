@@ -2,9 +2,8 @@ requirejs.config({
     baseUrl: 'js',
 
     paths: {
-        underscore: '../lib/underscore/underscore-min',
+        underscore: '../lib/underscore/underscore',
         angular: '../lib/angular/angular'
-        //, resource: 'lib/angular/angular-resource',
        
     },
 
@@ -29,7 +28,7 @@ requirejs(['angular',
             'app',
             'underscore',
             'routes',
-            '../lib/jquery/jquery.min',
+            '../lib/jquery/jquery',
             'services/services',
             'providers/providers',
             'directives/directives',

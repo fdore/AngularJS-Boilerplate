@@ -8,12 +8,6 @@ describe('TaskManager', function () {
         browser().navigateTo('/index.html');
         
     });
-
-/*
-    it('should automatically redirect to /view1 when location hash/fragment is empty', function () {
-        expect(browser().location().url()).toBe("/view1");
-    });
-*/
     
     describe('view1', function () {
 

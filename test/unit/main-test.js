@@ -14,17 +14,14 @@
     // Our own application including dependencies
     requireModules.push("app");
     requireModules.push('mocks');
-    requireModules.push('sinon');
     require({
         // !! Testacular serves files from '/base'
         baseUrl: '/base/app/js',
 
         paths: {
             angular: '../lib/angular/angular',
-            resource: 'lib/angular/angular-resource',
-            mocks: '../lib/angular/angular-mocks',
-            sinon: '../../test/lib/sinon/sinon',
-            underscore: '../lib/underscore/underscore-min'
+            mocks: '../lib/angular-mocks/angular-mocks',
+            underscore: '../lib/underscore/underscore'
         },
 
         shim: {
@@ -38,7 +35,8 @@
                     deps: ['angular']
                 },
                 'mocks': { deps: ['angular'], 'exports': 'mocks' },
-                'app': { deps: [
+                'app': { 
+                    deps: [
                         'services/services',
                         'providers/providers',
                         'directives/directives',
