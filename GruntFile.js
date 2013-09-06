@@ -46,7 +46,8 @@ module.exports = function (grunt) {
             unit: {
                 options: {
                     configFile: 'scripts/config/karma.conf.js',
-                    singleRun: true
+                    singleRun: true,
+                    browsers: ['Firefox']
                 }
             }
         }
