@@ -6,7 +6,8 @@ var express = require('express'),
 app.configure(function() {
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.static("/"));
+  app.use(express.static("app"))
+  app.use(express.static("test"));
 });
 
 app.configure('development', function() {

@@ -10,7 +10,9 @@
     "grunt": "latest",
     "grunt-contrib-jshint": "~0.3.0",
     "grunt-contrib-watch": "~0.3.1",
-    "grunt-karma": "latest"
+    "grunt-karma": "latest",    
+    "karma-jasmine" : "*",
+    "karma-ng-scenario" : "*"
   },
   "scripts": {
     "test": "grunt travis --verbose"  
