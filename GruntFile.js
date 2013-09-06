@@ -1,11 +1,16 @@
 module.exports = function (grunt) {
+
     grunt.initConfig({
+        meta: {
+            files: ['app/js/**/*.js'],
+            specs: ['test/unit/**/*.js']
+        },
         watch: {
-            files: ['app/js/**/*.js', 'test/unit/**/*.js'],
+            files: ['<%= meta.files %>', '<%= meta.specs %>'],
             tasks: ['jshint', 'karma']
         },
         jshint: {
-            all: ['GruntFile.js', 'app/js/**/*.js', 'test/unit/**/*.js'],
+            all: ['GruntFile.js', '<%= meta.files %>', '<%= meta.specs %>'],
             options: {
                 curly: true,
                 eqeqeq: true,
@@ -41,8 +46,7 @@ module.exports = function (grunt) {
             unit: {
                 options: {
                     configFile: 'scripts/config/karma.conf.js',
-                    runnerPort: 9101,
-                    keepalive: true
+                    singleRun: true
                 }
             }
         }
@@ -53,5 +57,5 @@ module.exports = function (grunt) {
     // Default task.
     grunt.registerTask('default', 'jshint');
     // Travis CI task.
-    grunt.registerTask('travis', 'jshint');
+    grunt.registerTask('travis', ['jshint', 'karma:unit']);
 };

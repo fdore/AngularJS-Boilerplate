@@ -1,4 +1,4 @@
-basePath = '../';
+basePath = '../../';
 
 files = [
   ANGULAR_SCENARIO,
@@ -13,7 +13,7 @@ browsers = ['Chrome'];
 singleRun = true;
 
 proxies = {
-  '/': 'http://localhost:8000/'
+  '/': 'http://localhost:5000/'
 };
 
 junitReporter = {
