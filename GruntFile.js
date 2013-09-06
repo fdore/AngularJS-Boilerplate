@@ -47,7 +47,7 @@ module.exports = function (grunt) {
                 options: {
                     configFile: 'scripts/config/karma.conf.js',
                     singleRun: true,
-                    browsers: ['Firefox']
+                    browsers: ['Chrome']
                 }
             }
         }
@@ -58,5 +58,5 @@ module.exports = function (grunt) {
     // Default task.
     grunt.registerTask('default', 'jshint');
     // Travis CI task.
-    grunt.registerTask('travis', ['jshint', 'karma:unit']);
+    grunt.registerTask('travis', ['jshint']);
 };
