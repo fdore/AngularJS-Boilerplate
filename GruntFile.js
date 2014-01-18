@@ -3,11 +3,29 @@ module.exports = function (grunt) {
     grunt.initConfig({
         meta: {
             files: ['app/js/**/*.js'],
-            specs: ['test/unit/**/*.js']
+            specs: ['test/unit/**/*.js'],
+            less: ['app/**/*.less']
         },
         watch: {
-            files: ['<%= meta.files %>', '<%= meta.specs %>'],
-            tasks: ['jshint', 'karma']
+            dev: {
+                files: ['<%= meta.files %>', '<%= meta.specs %>'],
+                tasks: ['jshint', 'karma:unit']
+            },
+            ui: {
+                files: ['<%= meta.less %>'],
+                tasks: ['less']
+            }
+        },
+        less: {
+            development: {
+                options: {
+                    paths: ['app/less'],
+                    yuicompress: false
+                },
+                files: [
+                    { 'app/css/app.css': 'app/less/app.less' }
+                ]
+            }
         },
         jshint: {
             all: ['GruntFile.js', '<%= meta.files %>', '<%= meta.specs %>'],
@@ -55,6 +73,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
     // Default task.
     grunt.registerTask('default', 'jshint');
     // Travis CI task.

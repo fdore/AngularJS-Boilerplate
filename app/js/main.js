@@ -18,6 +18,9 @@ requirejs.config({
         'states': {
             deps: ['angular'],
             exports: 'states'
+        },
+        'angular-route': {
+            deps: ['angular']
         }
     },
     priority: [
