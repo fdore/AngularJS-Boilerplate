@@ -3,7 +3,7 @@ define(['angular', 'angular-route'], function (angular) {
 
     // Declare app level module which depends on filters, and services
     return angular.module('App', [
-    	'ngRoute',
+		'ngRoute',
 		'App.services',
 		'App.directives',
 		'App.providers',
