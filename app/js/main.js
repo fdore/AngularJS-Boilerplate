@@ -3,7 +3,8 @@ requirejs.config({
 
     paths: {
         underscore: '../lib/underscore/underscore',
-        angular: '../lib/angular/angular'
+        angular: '../lib/angular/angular',
+        'angular-route': '../lib/angular-route/angular-route'
        
     },
 
