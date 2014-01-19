@@ -16,12 +16,19 @@
     requireModules.push('mocks');
     require({
         // !! Testacular serves files from '/base'
-        baseUrl: '/base/app/js',
+        baseUrl: '/base/app',
 
         paths: {
-            angular: '../lib/angular/angular',
-            mocks: '../lib/angular-mocks/angular-mocks',
-            underscore: '../lib/underscore/underscore'
+            angular: 'lib/angular/angular',
+            mocks: 'lib/angular-mocks/angular-mocks',
+            underscore: 'lib/underscore/underscore',
+            'angular-route': 'lib/angular-route/angular-route',
+            'controllers': 'js/controllers',
+            'services': 'js/services',
+            'providers': 'js/providers',
+            'filters': 'js/filters',
+            'directives': 'js/directives',
+            'app': 'js/app'
         },
 
         shim: {

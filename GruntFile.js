@@ -68,14 +68,45 @@ module.exports = function (grunt) {
                     browsers: ['Chrome']
                 }
             }
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: './app',
+                    mainConfigFile: 'app/main.js',
+                    dir: 'build',
+                    fileExclusionRegExp: 'node_modules|tests',
+                    skipDirOptimize: false,
+                    optimize: 'uglify2',
+                    skipModuleInsertion: false,
+                    onBuildRead: function (moduleName, path, contents) {
+                        return contents;
+                    },
+                    uglify2: {
+                        output: {
+                            beautify: false
+                        },
+                        mangle: false
+                    },
+                    modules: [
+                        {
+                            name: 'main'
+                        }
+                    ]
+                }
+            }
         }
+        
     });
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     // Default task.
     grunt.registerTask('default', 'jshint');
+    grunt.registerTask('build', ['requirejs']);
+
     // Travis CI task.
     grunt.registerTask('travis', ['jshint']);
 };

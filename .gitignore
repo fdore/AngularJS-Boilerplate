@@ -9,3 +9,4 @@ build.xml
 /node_modules
 /app\js/config.js
 /node_modules
+/build

@@ -13,7 +13,8 @@
     "grunt-karma": "latest",
     "karma-jasmine": "*",
     "karma-ng-scenario": "*",
-    "grunt-contrib-less": "~0.9.0"
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-requirejs": "~0.4.1"
   },
   "scripts": {
     "test": "grunt travis --verbose"

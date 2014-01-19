@@ -1,10 +1,15 @@
 requirejs.config({
-    baseUrl: 'js',
 
     paths: {
-        underscore: '../lib/underscore/underscore',
-        angular: '../lib/angular/angular',
-        'angular-route': '../lib/angular-route/angular-route'
+        underscore: 'lib/underscore/underscore',
+        angular: 'lib/angular/angular',
+        'angular-route': 'lib/angular-route/angular-route',
+        'controllers': 'js/controllers',
+        'services': 'js/services',
+        'providers': 'js/providers',
+        'filters': 'js/filters',
+        'directives': 'js/directives',
+        'app': 'js/app'
        
     },
 
@@ -31,8 +36,8 @@ requirejs.config({
 requirejs(['angular',
             'app',
             'underscore',
-            'routes',
-            '../lib/jquery/jquery',
+            'js/routes',
+            'lib/jquery/jquery',
             'services/services',
             'providers/providers',
             'directives/directives',
